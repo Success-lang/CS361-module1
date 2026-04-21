@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Student Registration Form</h1>
+        <form action="#" method="POST">
+            <fieldset>
+                <legend>Personal Details</legend>
+                
+                <div>
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
+                
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div>
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                
+                <div>
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob">
+                </div>
+                
+                <fieldset>
+                    <legend>Gender:</legend>
+                    <div>
+                        <input type="radio" id="male" name="gender" value="Male">
+                        <label for="male">Male</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="female" name="gender" value="Female">
+                        <label for="female">Female</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="other" name="gender" value="Other">
+                        <label for="other">Other</label>
+                    </div>
+                </fieldset>
+                
+                <div>
+                    <label for="photo">Profile Photo:</label>
+                    <input type="file" id="photo" name="photo" accept="image/*">
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Academic Details</legend>
+                
+                <div>
+                    <label for="studentid">Student ID:</label>
+                    <input type="text" id="studentid" name="studentid" pattern="[A-Z]{2}[0-9]{6}" required title="Format: 2 uppercase letters followed by 6 digits (e.g., CS123456)">
+                </div>
+                
+                <div>
+                    <label for="programme">Programme:</label>
+                    <select id="programme" name="programme">
+                        <option value="">Select a programme</option>
+                        <option value="CS">Computer Science</option>
+                        <option value="IT">Information Technology</option>
+                        <option value="IS">Information Systems</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="yearofstudy">Year of Study:</label>
+                    <input type="number" id="yearofstudy" name="yearofstudy" min="1" max="5">
+                </div>
+                
+                <fieldset>
+                    <legend>Specialisation:</legend>
+                    <div>
+                        <input type="checkbox" id="web" name="specialisation" value="Web">
+                        <label for="web">Web Development</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="security" name="specialisation" value="Security">
+                        <label for="security">Cybersecurity</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="ai" name="specialisation" value="AI">
+                        <label for="ai">Artificial Intelligence</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="networks" name="specialisation" value="Networks">
+                        <label for="networks">Networks</label>
+                    </div>
+                </fieldset>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Additional Information</legend>
+                <div>
+                    <label for="about">Tell us about yourself:</label>
+                    <textarea id="about" name="about" rows="4" required></textarea>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <div>
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+</body>
+</html>
