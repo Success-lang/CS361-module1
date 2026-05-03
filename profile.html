@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Felix Lungu - Profile</title>
+    <link rel='stylesheet' href='style.css'>
 </head>
 <body>
     <header>
         <h1>Felix Lungu</h1>
+        <span class="availability-badge">Available for Projects</span>
         <nav>
             <a href="#">Home</a>
             <a href="#">About</a>
@@ -16,15 +18,16 @@
     </header>
     <main>
         <article>
-            <figure>
+            <figure class="profile-figure">
                 <img src="felix.png" alt="Photo of Myself" width="200" height="200">
                 <figcaption>Felix Lungu — Year 3 CS Student</figcaption>
             </figure>
-            <h2>About Me</h2>
+            <section>
+                <h2>About Me</h2>
             <p>I am Felix Lungu, a dedicated third-year Computer Science student at Copperblet University University. Passionate about technology and problem-solving, I enjoy exploring new programming languages and frameworks to build innovative solutions.</p>
             <p>Outside of academics, I actively participate in coding competitions and hackathons, which have honed my skills in collaborative development and rapid prototyping. I believe in continuous learning and staying updated with the latest trends in software engineering.</p>
             <h3>Hobbies and Interests</h3>
-            <ul>
+            <ul class="skills-list">
                 <li>Reading science fiction novels</li>
                 <li>Coding personal projects</li>
                 <li>Playing strategy board games</li>
@@ -32,12 +35,80 @@
                 <li>Learning new programming languages</li>
             </ul>
             <h3>Top Academic Courses</h3>
-            <ol>
+            <ol class="skills-list">
                 <li>Data Structures and Algorithms</li>
                 <li>Software Engineering</li>
                 <li>Database Systems</li>
             </ol>
+            </section>
+            
+            <section>
+                <h2>Academic Results</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Course</th>
+                            <th>Semester</th>
+                            <th>Grade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Data Structures and Algorithms</td>
+                            <td>Semester 3</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Software Engineering</td>
+                            <td>Semester 4</td>
+                            <td>A-</td>
+                        </tr>
+                        <tr>
+                            <td>Database Systems</td>
+                            <td>Semester 5</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Web Development</td>
+                            <td>Semester 5</td>
+                            <td>A+</td>
+                        </tr>
+                        <tr>
+                            <td>Machine Learning</td>
+                            <td>Semester 6</td>
+                            <td>A-</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">Average GPA:</td>
+                            <td>3.8/4.0</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </section>
         </article>
+        
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <article class="card">
+                    <h3>E-Commerce Platform</h3>
+                    <p>A full-stack web application built with React, Node.js, and MongoDB. Features include user authentication, payment processing, and admin dashboard.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </article>
+                <article class="card">
+                    <h3>Data Visualization Dashboard</h3>
+                    <p>Interactive dashboard using D3.js and Python Flask to visualize complex datasets. Includes real-time updates and export functionality.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </article>
+                <article class="card">
+                    <h3>Mobile Task Manager</h3>
+                    <p>Cross-platform mobile app developed with React Native. Features offline sync, push notifications, and collaborative task management.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </article>
+            </div>
+        </section>
     </main>
     <aside>
         <a href="https://github.com/Success-lang">GitHub</a>
