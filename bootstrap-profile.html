@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Felix Lungu - Bootstrap Profile</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+qdLa3aIY6Mlvb1KX7O0h0I/JCYFXKKU5QfK1O+H7eN1wNoUksdQRVvoxMfooAoB" crossorigin="anonymous">
+  <link rel="stylesheet" href="bootstrap-profile.css">
+</head>
+<body class="bg-light text-body">
+  <header class="bg-primary text-white shadow-sm mb-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-3 py-4">
+      <div>
+        <h1 class="h2 fw-bold mb-2 mb-md-0">Felix Lungu</h1>
+        <span class="badge bg-success text-uppercase fs-7">Available for Projects</span>
+      </div>
+      <nav class="d-flex flex-wrap gap-2">
+        <a class="btn btn-sm btn-outline-light" href="#">Home</a>
+        <a class="btn btn-sm btn-outline-light" href="#">About</a>
+        <a class="btn btn-sm btn-outline-light" href="#">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="row g-4">
+      <aside class="col-12 col-md-4">
+        <div class="card shadow rounded-4 p-4 h-100">
+          <div class="d-flex justify-content-center mb-4">
+            <img src="felix.png" alt="Photo of Felix Lungu" class="rounded-circle img-fluid profile-img">
+          </div>
+          <div class="text-center">
+            <p class="mb-1 text-secondary fst-italic">Felix Lungu — Year 3 CS Student</p>
+          </div>
+          <div class="mt-4">
+            <a href="https://github.com/Success-lang" class="btn btn-primary btn-sm w-100 mb-2">GitHub</a>
+            <a href="mailto:felixlungu407@gmail.com" class="btn btn-secondary btn-sm w-100 mb-3">CBU Email</a>
+          </div>
+          <dl class="row gx-3 gy-2 mb-0">
+            <dt class="col-5 fw-bold text-primary">Department</dt>
+            <dd class="col-7">Computer Science</dd>
+            <dt class="col-5 fw-bold text-primary">Year</dt>
+            <dd class="col-7">Year 3</dd>
+            <dt class="col-5 fw-bold text-primary">Programme</dt>
+            <dd class="col-7">Computer Science</dd>
+          </dl>
+        </div>
+      </aside>
+
+      <section class="col-12 col-md-8">
+        <div class="card shadow rounded-4 p-4 mb-4">
+          <h2 class="h4 fw-bold text-primary mb-3">About Me</h2>
+          <p>I am Felix Lungu, a dedicated third-year Computer Science student at Copperblet University University. Passionate about technology and problem-solving, I enjoy exploring new programming languages and frameworks to build innovative solutions.</p>
+          <p>Outside of academics, I actively participate in coding competitions and hackathons, which have honed my skills in collaborative development and rapid prototyping. I believe in continuous learning and staying updated with the latest trends in software engineering.</p>
+          <h3 class="h6 fw-bold mt-4 mb-3">Hobbies and Interests</h3>
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <span class="badge bg-primary">Reading science fiction novels</span>
+            <span class="badge bg-primary">Coding personal projects</span>
+            <span class="badge bg-primary">Playing strategy board games</span>
+            <span class="badge bg-primary">Playing football</span>
+            <span class="badge bg-primary">Learning new programming languages</span>
+          </div>
+          <h3 class="h6 fw-bold mt-4 mb-3">Top Academic Courses</h3>
+          <ol class="list-group list-group-numbered">
+            <li class="list-group-item">Data Structures and Algorithms</li>
+            <li class="list-group-item">Software Engineering</li>
+            <li class="list-group-item">Database Systems</li>
+          </ol>
+        </div>
+
+        <div class="card shadow rounded-4 p-4">
+          <h2 class="h4 fw-bold text-primary mb-3">Academic Results</h2>
+          <div class="table-responsive">
+            <table class="table table-striped align-middle">
+              <thead class="table-primary">
+                <tr>
+                  <th>Course</th>
+                  <th>Semester</th>
+                  <th>Grade</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Data Structures and Algorithms</td><td>Semester 3</td><td>A</td></tr>
+                <tr><td>Software Engineering</td><td>Semester 4</td><td>A-</td></tr>
+                <tr><td>Database Systems</td><td>Semester 5</td><td>A</td></tr>
+                <tr><td>Web Development</td><td>Semester 5</td><td>A+</td></tr>
+                <tr><td>Machine Learning</td><td>Semester 6</td><td>A-</td></tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="2" class="fw-bold">Average GPA:</td>
+                  <td class="fw-bold">3.8/4.0</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="card shadow rounded-4 p-4 mt-4">
+      <h2 class="h4 fw-bold text-center text-primary mb-4">Featured Projects</h2>
+      <div class="row g-4">
+        <div class="col-12 col-lg-4">
+          <div class="card h-100 border-primary border-3 shadow-sm">
+            <div class="card-body">
+              <h3 class="h6 fw-bold">E-Commerce Platform</h3>
+              <p>A full-stack web application built with React, Node.js, and MongoDB. Features include user authentication, payment processing, and admin dashboard.</p>
+              <a href="#" class="btn btn-sm btn-primary">View Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="card h-100 border-primary border-3 shadow-sm">
+            <div class="card-body">
+              <h3 class="h6 fw-bold">Data Visualization Dashboard</h3>
+              <p>Interactive dashboard using D3.js and Python Flask to visualize complex datasets. Includes real-time updates and export functionality.</p>
+              <a href="#" class="btn btn-sm btn-primary">View Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="card h-100 border-primary border-3 shadow-sm">
+            <div class="card-body">
+              <h3 class="h6 fw-bold">Mobile Task Manager</h3>
+              <p>Cross-platform mobile app developed with React Native. Features offline sync, push notifications, and collaborative task management.</p>
+              <a href="#" class="btn btn-sm btn-primary">View Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="text-center py-4 mt-4">
+      <p class="mb-0">Contact: <a href="mailto:felixlungu407@gmail.com">felixlungu407@gmail.com</a></p>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYFZ5S2eNV6qE7ZbE3sHsiTdJ3z6eVoEm8XW6i78eD8Ry7BvDU1zK0vub" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-/* ============================================
+﻿/* ============================================
    Google Fonts Import
    ============================================ */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap');
@@ -7,32 +7,32 @@
    CSS Variables - Design Tokens
    ============================================ */
 :root {
-  /* Color Variables */
+  /* Colors */
   --color-primary: #2563eb;
   --color-secondary: #64748b;
   --color-accent: #dc2626;
   --color-success: #16a34a;
   --color-warning: #ea580c;
-  
-  /* Spacing Variables */
+
+  /* Spacing */
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
   --space-md: 1rem;
   --space-lg: 1.5rem;
   --space-xl: 2rem;
   --space-2xl: 3rem;
-  
+
   /* Typography */
   --font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   --font-family-heading: 'Poppins', 'Segoe UI', sans-serif;
   --font-size-base: 1rem;
   --line-height-base: 1.6;
-  
+
   /* Border Radius */
   --border-radius: 0.5rem;
   --border-radius-lg: 1rem;
-  
-  /* Box Shadow */
+
+  /* Shadows */
   --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   --box-shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.16);
 }
@@ -51,6 +51,7 @@ html {
 }
 
 body {
+  min-height: 100vh;
   font-family: var(--font-family);
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
@@ -58,8 +59,35 @@ body {
   background-color: #f9fafb;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-accent);
+}
+
+ul,
+ol {
+  padding-left: var(--space-lg);
+  margin-bottom: var(--space-md);
+}
+
+li {
+  margin-bottom: var(--space-sm);
+}
+
 /* ============================================
-   Typography Scale
+   Typography
    ============================================ */
 h1 {
   font-family: var(--font-family-heading);
@@ -93,52 +121,140 @@ p {
   color: #4b5563;
 }
 
-/* ============================================
-   Selectors Practice
-   ============================================ */
-
-/* Element Selectors */
-a {
+section h2::before {
+  content: '→ ';
   color: var(--color-primary);
-  text-decoration: none;
-  transition: color 0.3s ease;
+  margin-right: var(--space-sm);
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+/* ============================================
+   Header & Navigation
+   ============================================ */
+header {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #1e40af 100%);
+  color: white;
+  padding: var(--space-xl) var(--space-lg);
+  margin-bottom: var(--space-2xl);
+  box-shadow: var(--box-shadow-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--space-md);
 }
 
-ul, ol {
-  padding-left: var(--space-lg);
+header h1 {
   margin-bottom: var(--space-md);
 }
 
-li {
-  margin-bottom: var(--space-sm);
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(30, 64, 175, 0.95);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--border-radius);
 }
 
-/* Class Selectors */
+nav a {
+  display: inline-block;
+  padding: var(--space-sm) var(--space-md);
+  color: white;
+  border-bottom: 3px solid transparent;
+  font-weight: 500;
+  transition: border-bottom 0.25s ease;
+}
+
+nav a:hover {
+  border-bottom-color: var(--color-accent);
+}
+
+.availability-badge {
+  background-color: var(--color-success);
+  color: white;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--border-radius);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: var(--box-shadow);
+}
+
+/* ============================================
+   Page Layout
+   ============================================ */
+.page-wrapper {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 3rem;
+  align-items: start;
+}
+
+.profile-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  margin: 0;
+  padding: 0 var(--space-lg);
+  min-height: calc(100vh - 400px);
+}
+
+article,
+section,
+aside,
+.card {
+  background-color: white;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--box-shadow);
+}
+
+article {
+  padding: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+section {
+  padding: var(--space-lg);
+  margin-bottom: var(--space-lg);
+  border-left: 4px solid var(--color-primary);
+  transition: transform 0.2s ease;
+}
+
+section:hover {
+  transform: translateX(4px);
+}
+
+aside {
+  padding: var(--space-lg);
+}
 .profile-figure {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-bottom: var(--space-2xl);
-  background-color: white;
-  padding: var(--space-lg);
-  border-radius: var(--border-radius-lg);
-  box-shadow: var(--box-shadow);
+  margin-bottom: 0;
+  padding: 0;
 }
 
 .profile-figure img {
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
+  width: 240px;
+  height: 240px;
   object-fit: cover;
-  border: 4px solid var(--color-primary);
-  margin-bottom: var(--space-md);
+  border-radius: 50%;
+  border: 5px solid var(--color-primary);
+  margin-bottom: var(--space-lg);
   box-shadow: var(--box-shadow-lg);
   transition: transform 0.3s ease;
 }
@@ -164,120 +280,27 @@ li {
 }
 
 .skills-list li {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   background-color: var(--color-primary);
   color: white;
   padding: var(--space-sm) var(--space-md);
   border-radius: 50px;
   font-size: 0.9rem;
   font-weight: 500;
-  transition: all 0.3s ease;
-  margin: 0;
+  transition: background-color 0.3s ease, transform 0.3s ease;
   box-shadow: var(--box-shadow);
-  border: 2px solid transparent;
 }
 
 .skills-list li:hover {
   background-color: var(--color-accent);
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   box-shadow: var(--box-shadow-lg);
-  border-color: var(--color-accent);
-}
-
-/* Advanced Selectors */
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0;
-  margin-top: var(--space-md);
-}
-
-nav a {
-  display: inline-block;
-  padding: var(--space-sm) var(--space-md);
-  color: white;
-  border-bottom: 3px solid transparent;
-  font-weight: 500;
-  transition: border-bottom 0.25s ease;
-}
-
-nav a:hover {
-  border-bottom-color: var(--color-accent);
-}
-
-section h2::before {
-  content: "→ ";
-  color: var(--color-primary);
-  margin-right: var(--space-sm);
 }
 
 /* ============================================
-   Layout Components
+   Aside Links
    ============================================ */
-header {
-  background: linear-gradient(135deg, var(--color-primary) 0%, #1e40af 100%);
-  color: white;
-  padding: var(--space-xl) var(--space-lg);
-  margin-bottom: var(--space-2xl);
-  box-shadow: var(--box-shadow-lg);
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
-header h1 {
-  margin-bottom: var(--space-md);
-}
-
-.availability-badge {
-  background-color: var(--color-success);
-  color: white;
-  padding: var(--space-xs) var(--space-sm);
-  border-radius: var(--border-radius);
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  box-shadow: var(--box-shadow);
-}
-
-main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--space-lg);
-  min-height: calc(100vh - 400px);
-}
-
-article {
-  background-color: white;
-  padding: var(--space-xl);
-  border-radius: var(--border-radius-lg);
-  box-shadow: var(--box-shadow);
-  margin-bottom: var(--space-xl);
-}
-
-section {
-  background-color: white;
-  padding: var(--space-lg);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  margin-bottom: var(--space-lg);
-  border-left: 4px solid var(--color-primary);
-  transition: transform 0.2s ease;
-}
-
-section:hover {
-  transform: translateX(4px);
-}
-
-aside {
-  background-color: white;
-  padding: var(--space-lg);
-  margin-top: var(--space-xl);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-}
-
 aside a {
   display: inline-block;
   padding: var(--space-sm) var(--space-md);
@@ -296,10 +319,6 @@ aside a:hover {
 /* ============================================
    Definition Lists
    ============================================ */
-dl {
-  margin-top: var(--space-lg);
-}
-
 dt {
   font-weight: 600;
   color: var(--color-primary);
@@ -312,6 +331,13 @@ dd {
   margin-bottom: var(--space-sm);
 }
 
+dl {
+  margin-top: var(--space-lg);
+}
+
+/* ============================================
+   Footer
+   ============================================ */
 footer {
   background-color: #1f2937;
   color: white;
@@ -335,16 +361,16 @@ footer p {
 }
 
 /* ============================================
-   Table Styling
+   Tables
    ============================================ */
 table {
   width: 100%;
   border-collapse: collapse;
   margin: var(--space-lg) 0;
-  background-color: white;
-  box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
   overflow: hidden;
+  background-color: white;
+  box-shadow: var(--box-shadow);
 }
 
 thead {
@@ -392,11 +418,10 @@ tfoot td {
 }
 
 /* ============================================
-   Projects Section
+   Projects
    ============================================ */
 #projects {
-  margin-top: var(--space-2xl);
-  margin-bottom: var(--space-2xl);
+  margin: var(--space-2xl) 0;
 }
 
 #projects h2 {
@@ -411,10 +436,7 @@ tfoot td {
 }
 
 .card {
-  background-color: white;
   padding: var(--space-lg);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
   border-left: 4px solid var(--color-primary);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -452,7 +474,7 @@ tfoot td {
 }
 
 /* ============================================
-   Responsive Design
+   Responsive Design - Mobile (max-width: 768px)
    ============================================ */
 @media (max-width: 768px) {
   header {
@@ -460,57 +482,77 @@ tfoot td {
     align-items: flex-start;
     gap: var(--space-md);
   }
-  
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
   .availability-badge {
     align-self: flex-end;
     margin-bottom: var(--space-sm);
   }
-  
-  h1 {
-    font-size: 1.8rem;
-  }
-  
+
   h2 {
     font-size: 1.3rem;
   }
-  
+
+  .page-wrapper {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem 1.5rem 2rem;
+  }
+
+  .profile-section {
+    display: flex;
+    justify-content: center;
+  }
+
+  .profile-figure img {
+    width: 180px;
+    height: 180px;
+  }
+
   main {
     padding: 0 var(--space-md);
   }
-  
-  article {
-    padding: var(--space-lg);
-  }
-  
+
   nav {
     flex-direction: column;
     gap: var(--space-sm);
+    width: 100%;
   }
-  
+
   nav a {
     padding: var(--space-sm);
     width: 100%;
     text-align: center;
   }
-  
+
+  article,
+  section,
+  aside,
+  .card {
+    padding: var(--space-lg);
+  }
+
   .skills-list {
     gap: var(--space-xs);
   }
-  
+
   .skills-list li {
     font-size: 0.85rem;
     padding: var(--space-xs) var(--space-sm);
   }
-  
+
   .projects-grid {
     grid-template-columns: 1fr;
     gap: var(--space-lg);
   }
-  
+
   table {
     font-size: 0.9rem;
   }
-  
+
   thead th,
   tbody td,
   tfoot td {
